@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts & Comments</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f6fa;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #f0f0f0;
+        }
+
+        input[type="text"] {
+            padding: 6px;
+            margin-right: 6px;
+            margin-top: 10px;
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .form-group {
+            margin-top: 10px;
+        }
+
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">2280601791 - Trần Hoà Long</h1>
+        <hr />
+        <h2>Posts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tiêu đề</th>
+                    <th>Lượt xem</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="body_table"></tbody>
+        </table>
+
+        <div class="form-group">
+            <input type="text" id="id_txt" placeholder="Id (để trống khi tạo mới)" />
+            <input type="text" id="title_txt" placeholder="Tiêu đề" />
+            <input type="text" id="view_txt" placeholder="Lượt xem" />
+            <input type="submit" value="Save" onclick="Save()">
+        </div>
+
+        <hr>
+
+        <h2>Comments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>PostId</th>
+                    <th>Nội dung</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="comment_table"></tbody>
+        </table>
+
+        <div class="form-group">
+            <input type="text" id="comment_id_txt" placeholder="Id (để trống khi tạo mới)">
+            <input type="text" id="comment_postId_txt" placeholder="PostId">
+            <input type="text" id="comment_text_txt" placeholder="Nội dung comment">
+            <input type="submit" value="Save Comment" onclick="SaveComment()">
+        </div>
+
+    </div>
+
+    <script src="ngay2.js"></script>
+</body>
+
+</html>
